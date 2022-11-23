@@ -4,20 +4,29 @@ import MenuIcon from "@/components/icons/MenuIcon";
 import CartIcon from "@/components/icons/CartIcon";
 import CloseIcon from "@/components/icons/CloseIcon";
 import {useState} from 'react'
+import NavLinkHeader from "@/components/header/NavLinkHeader";
 
 const MainHeader = () => {
 
-    const [navClass, setNavClass] = useState("hidden font-bold md:mr-auto md:flex md:flex-row md:gap-4 md:static md:p-0")
-    const handleOpenMenu = () => {
-      setNavClass('absolute font-bold top-0 left-0 flex h-full w-4/5 p-8 gap-y-5 bg-white flex-col md:mr-auto md:flex md:flex-row md:gap-4 md:static md:p-0')
-    }
-    const handleCloseMenu = () => {
-      setNavClass("hidden font-bold md:mr-auto md:flex md:flex-row md:gap-4 md:static md:p-0")
-    }
- 
-
+  const handleOpenMenu = () => {
+    setNavClass('absolute font-bold top-0 left-0 flex h-full w-4/5 p-8 gap-y-5 bg-white flex-col md:mr-auto md:flex md:flex-row md:gap-4 md:static md:p-0')
+  }
+  const handleCloseMenu = () => {
+    setNavClass("hidden font-bold md:mr-auto md:flex md:flex-row md:gap-4 md:static md:p-0")
+  }
+  
+  const [navClass, setNavClass] = useState("hidden font-bold md:mr-auto md:flex md:flex-row md:gap-4 md:static md:p-0")
+  
+  
+  // const [yatusabe, setYatusabe] = useState("Holi")
+  // const handleYatusabe = () => {
+  //   setYatusabe(yatusabe==="holi"? "holo":"holi")
+  // }
   return (
-    <header className="container mx-auto flex items-center bg-gray-200 gap-8 px-4 py-8">
+    <>
+
+    {/* <button onClick={handleYatusabe}>{yatusabe}</button> */}
+    <header className="container mx-auto flex items-center gap-8 p-4 md:p-0">
       <button className="md:hidden" onClick={handleOpenMenu}>
         <MenuIcon />
       </button>
@@ -28,11 +37,12 @@ const MainHeader = () => {
         <button className="mb-12 md:hidden" onClick={handleCloseMenu}>
           <CloseIcon />
         </button>
-        <a href="#">Collections</a>
-        <a href="#">Men</a>
-        <a href="#">Woman</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+        <NavLinkHeader text="Collections" />
+        <NavLinkHeader text="Men" />
+        <NavLinkHeader text="Woman" />
+        <NavLinkHeader text="About" />
+        <NavLinkHeader text="Contact" />
+        
       </nav>
       <div className="flex gap-4">
         <button>
@@ -41,6 +51,8 @@ const MainHeader = () => {
         <img src={AvatarImage} className="w-10" alt=""></img>
       </div>
     </header>
+    <span className="container mx-auto h-[1px] w-full bg-gray-500 md:block"></span>
+    </>
   );
 };
 
