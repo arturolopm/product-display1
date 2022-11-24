@@ -9,7 +9,7 @@ import NavLinkHeader from "@/components/header/NavLinkHeader";
 const MainHeader = () => {
 
   const handleOpenMenu = () => {
-    setNavClass('absolute font-bold top-0 left-0 flex h-full w-4/5 p-8 gap-y-5 bg-white flex-col md:mr-auto md:flex md:flex-row md:gap-4 md:static md:p-0')
+    setNavClass('absolute z-10 font-bold top-0 left-0 flex h-full w-4/5 p-8 gap-y-5 bg-white flex-col md:mr-auto md:flex md:flex-row md:gap-4 md:static md:p-0')
   }
   const handleCloseMenu = () => {
     setNavClass("hidden font-bold md:mr-auto md:flex md:flex-row md:gap-4 md:static md:p-0")
@@ -18,14 +18,9 @@ const MainHeader = () => {
   const [navClass, setNavClass] = useState("hidden font-bold md:mr-auto md:flex md:flex-row md:gap-4 md:static md:p-0")
   
   
-  // const [yatusabe, setYatusabe] = useState("Holi")
-  // const handleYatusabe = () => {
-  //   setYatusabe(yatusabe==="holi"? "holo":"holi")
-  // }
   return (
     <>
 
-    {/* <button onClick={handleYatusabe}>{yatusabe}</button> */}
     <header className="container mx-auto flex items-center gap-8 p-4 md:p-0">
       <button className="md:hidden" onClick={handleOpenMenu}>
         <MenuIcon />
