@@ -1,10 +1,10 @@
-import MainHeader from "@/components/header/MainHeader";
-import MainProduct from "@/components/product/MainProducts";
+import IndexHeader from "@/components/header/IndexHeader";
+import IndexProducts from "@/components/product/IndexProducts";
 const App = () => {
   return (
     <>
-      <MainHeader />
-      <MainProduct />
+      <IndexHeader />
+      <IndexProducts />
     </>
   );
 };

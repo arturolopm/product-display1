@@ -38,7 +38,7 @@ const SlideProduct = ({
                 <button onClick={handleCloseModal} className="md:col-span-4 text-right">X</button>
         )}
             <div className=" relative col-span-4">
-                <img src={ARRAY_IMGS[imgIndex]} alt="" className=" aspect-auto w-full md:cursor-pointer md:rounded-md" onClick={handleOpenModal} />
+                <img src={ARRAY_IMGS[imgIndex]} alt="" className=" content-center max-w-lg aspect-auto w-full md:cursor-pointer md:rounded-md" onClick={handleOpenModal} />
 
                 <div ref={btnSlider} className="absolute top-1/2 left-0 flex w-full -translate-y-1/2 justify-between px-4 md:hidden">
 
@@ -64,7 +64,7 @@ const SlideProduct = ({
                             
                             src={smallImg} 
                             alt="" 
-                            className="hidden md:block md:rounded-md" 
+                            className="hidden  md:block md:rounded-md" 
                         />
                         <span className={` absolute top-0 h-full w-full hover:bg-[rgba(255,255,255,0.5)] ${i === imgIndex && 'bg-[rgba(255,255,255,0.5)]'}`}></span>
                     </div>

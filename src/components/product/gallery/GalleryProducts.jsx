@@ -1,7 +1,7 @@
-import SlideProduct from "@/components/product/col-images/SlideProduct";
+import SlideProduct from "@/components/product/gallery/SlideProduct";
 import { useState } from "react";
 
-const MainImages = ({ ARRAY_IMGS, ARRAY_IMG_SMALL }) => {
+const GalleryProducts = ({ ARRAY_IMGS, ARRAY_IMG_SMALL }) => {
 
     const [isOpenModal, setIsOpenModal] = useState(false)
 
@@ -17,23 +17,24 @@ const MainImages = ({ ARRAY_IMGS, ARRAY_IMG_SMALL }) => {
             <SlideProduct 
                 ARRAY_IMGS={ARRAY_IMGS}
                 ARRAY_IMG_SMALL={ARRAY_IMG_SMALL}
-                className="grid md:grid-cols-4 md:gap-4"
+                className="grid place-items-center max-w-3xl content-center md:grid-cols-4 md:gap-4"
                 handleOpenModal={handleOpenModal}
             />
             {isOpenModal && (
-
+                <>
                 <SlideProduct 
                     ARRAY_IMGS={ARRAY_IMGS}
                     ARRAY_IMG_SMALL={ARRAY_IMG_SMALL}
                     isOpenModal={isOpenModal}
-                    className="hidden md:grid md:absolute md:-translate-y-1/2 md:-translate-x-1/2 md:top-1/2 md:left-1/2 md:max-w-md md:grid-cols-4 md:gap-4 "
+                    className="hidden md:grid md:absolute md:-translate-y-1/2 md:-translate-x-1/2 md:top-1/2 md:left-1/2 md:z-10 md:max-w-md md:grid-cols-4 md:gap-4 "
                     handleCloseModal={handleCloseModal}
                 />
-                
+                <span className=" fixed top-0 left-0 w-full h-full bg-black/60 backdrop-blur-sm" onClick={handleCloseModal}></span>
+                </>
             )}
         </>
         
     )
 }
 
-export default MainImages
+export default GalleryProducts

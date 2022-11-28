@@ -6,7 +6,7 @@ import CloseIcon from "@/components/icons/CloseIcon";
 import {useState} from 'react'
 import NavLinkHeader from "@/components/header/NavLinkHeader";
 
-const MainHeader = () => {
+const IndexHeader = () => {
 
   const handleOpenMenu = () => {
     setNavClass('absolute z-10 font-bold top-0 left-0 flex h-full w-4/5 p-8 gap-y-5 bg-white flex-col md:mr-auto md:flex md:flex-row md:gap-4 md:static md:p-0')
@@ -51,4 +51,4 @@ const MainHeader = () => {
   );
 };
 
-export default MainHeader;
+export default IndexHeader;
