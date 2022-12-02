@@ -17,7 +17,7 @@ const GalleryProducts = ({ ARRAY_IMGS, ARRAY_IMG_SMALL }) => {
             <SlideProduct 
                 ARRAY_IMGS={ARRAY_IMGS}
                 ARRAY_IMG_SMALL={ARRAY_IMG_SMALL}
-                className="grid place-items-center content-center md:grid-cols-4 md:gap-4 xl:max-w-[500px]"
+                className="grid place-items-center mx-auto content-center md:grid-cols-4 md:gap-4 max-w-[500px]"
                 handleOpenModal={handleOpenModal}
             />
             {isOpenModal && (
@@ -26,7 +26,7 @@ const GalleryProducts = ({ ARRAY_IMGS, ARRAY_IMG_SMALL }) => {
                     ARRAY_IMGS={ARRAY_IMGS}
                     ARRAY_IMG_SMALL={ARRAY_IMG_SMALL}
                     isOpenModal={isOpenModal}
-                    className="hidden md:grid md:absolute md:-translate-y-1/2 md:-translate-x-1/2 md:top-1/2 md:left-1/2 md:z-10 md:grid-cols-4 md:gap-4 xl:max-w-[500px]"
+                    className="hidden md:grid md:absolute md:-translate-y-1/2 md:-translate-x-1/2 md:top-1/2 md:left-1/2 md:z-10 md:grid-cols-4 md:gap-4 max-w-[500px]"
                     handleCloseModal={handleCloseModal}
                 />
                 <span className=" fixed top-0 left-0 w-full h-full bg-black/60 backdrop-blur-sm" onClick={handleCloseModal}></span>

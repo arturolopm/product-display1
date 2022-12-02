@@ -71,7 +71,7 @@ const IndexHeader = () => {
         }
       </div>
     </header>
-    <span className="container mx-auto h-[3px] w-full bg-gray-500 md:block"></span>
+    <span className="container mb-2 mx-auto h-[1px] w-full bg-gray-500 md:block"></span>
     </>
   );
 };

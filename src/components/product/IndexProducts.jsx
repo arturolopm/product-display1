@@ -31,7 +31,7 @@ const objectProduct = {
 
 const IndexProducts = () => {
   return (
-    <main className="grid grid-cols-1 items-center gap-8 md:mx-auto md:container md:min-h-[calc(100vh-88px-3px)] md:grid-cols-2">
+    <main className="grid grid-cols-1 items-center gap-8 mx-auto md:container md:min-h-[calc(100vh-88px-3px)] md:grid-cols-2">
       <GalleryProducts 
         ARRAY_IMGS={objectProduct.imagesMain}
         ARRAY_IMG_SMALL={objectProduct.imagesSmall}
