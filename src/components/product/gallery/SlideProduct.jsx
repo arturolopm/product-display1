@@ -32,7 +32,7 @@ const SlideProduct = ({
 
 
     return (
-        <section {...props}>
+        <section className="xl:max-w-[500px]" {...props}>
         {
             isOpenModal && (
                 <button onClick={handleCloseModal} className="md:col-span-4 text-right">X</button>
@@ -60,13 +60,13 @@ const SlideProduct = ({
                         onClick={() => {
                             setImgIndex(i)
                             }} 
-                        className="relative cursor-pointer rounded-md overflow-hidden">
+                        className="relative cursor-pointer rounded-md overflow-hidden ">
 
                         <img 
                             
                             src={smallImg} 
                             alt="" 
-                            className="hidden  md:block md:rounded-md 2xl:max-w-[100px]" 
+                            className="hidden  md:block md:rounded-md " 
                         />
                         <span className={` absolute top-0 h-full w-full hover:bg-[rgba(255,255,255,0.5)] ${i === imgIndex && 'bg-[rgba(255,255,255,0.5)]'}`}></span>
                     </div>
