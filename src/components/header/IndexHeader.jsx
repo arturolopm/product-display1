@@ -38,7 +38,7 @@ const IndexHeader = () => {
       <button className="md:hidden" onClick={handleOpenMenu}>
         <MenuIcon />
       </button>
-      <img className="mr-auto mb-1 h-5 md:mr-0" 
+      <img className=" mx-4 mr-auto mb-1 h-5 md:mr-5" 
             src={logoSneakers} 
             alt="Logo Sneakers" />
       <nav 
@@ -65,7 +65,7 @@ const IndexHeader = () => {
             {cartQuantity}
           </span>
         </button>
-        <img src={AvatarImage} className="w-10" alt=""></img>
+        <img src={AvatarImage} className="w-10 mx-4" alt=""></img>
         {
           isOpenCart && <CardDetailsHeader />
         }

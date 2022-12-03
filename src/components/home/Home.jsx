@@ -63,6 +63,33 @@ const Home = () => {
         
         </div>
         <span className="container mb-2 mx-auto h-[1px] w-full bg-gray-300 block"></span>
+        <div className=" flex flex-row rounded-xl items-center gap-1 mx-auto mb-2 md:container max-h-[25%] ">
+        <GalleryProductsHome 
+            ARRAY_IMGS={objectProduct.imagesMain}
+            ARRAY_IMG_SMALL={objectProduct.imagesSmall}
+        />
+        <DetailsProductHome objectProduct={objectProduct} />
+        
+        </div>
+        <span className="container mb-2 mx-auto h-[1px] w-full bg-gray-300 block"></span>
+        <div className=" flex flex-row rounded-xl items-center gap-1 mx-auto mb-2 md:container max-h-[25%] ">
+        <GalleryProductsHome 
+            ARRAY_IMGS={objectProduct.imagesMain}
+            ARRAY_IMG_SMALL={objectProduct.imagesSmall}
+        />
+        <DetailsProductHome objectProduct={objectProduct} />
+        
+        </div>
+        <span className="container mb-2 mx-auto h-[1px] w-full bg-gray-300 block"></span>
+        <div className=" flex flex-row rounded-xl items-center gap-1 mx-auto mb-2 md:container max-h-[25%] ">
+        <GalleryProductsHome 
+            ARRAY_IMGS={objectProduct.imagesMain}
+            ARRAY_IMG_SMALL={objectProduct.imagesSmall}
+        />
+        <DetailsProductHome objectProduct={objectProduct} />
+        
+        </div>
+        <span className="container mb-2 mx-auto h-[1px] w-full bg-gray-300 block"></span>
         
 
     </section>

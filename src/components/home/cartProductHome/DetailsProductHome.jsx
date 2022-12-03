@@ -28,7 +28,7 @@ const DetailsProductsHome = ({objectProduct}) => {
         <h2 className=" mb-0 text-sm font-bold">
         {objectProduct.title}
         </h2>
-        <p className=" hidden max-h-12 overflow-hidden text-xs mb-0 text-dark-grayish-blue min-[320px]:block">
+        <p className=" hidden max-h-12 overflow-hidden text-clip text-xs mb-0 text-dark-grayish-blue min-[320px]:block">
         {objectProduct.description}
         </p>
         <div className="flex mb-0 items-center justify-start gap-4 font-bold md:gap-1">
