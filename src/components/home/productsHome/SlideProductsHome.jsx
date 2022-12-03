@@ -25,9 +25,9 @@ const SlideProductsHome = ({
 
 
     return (
-        <section className="xl:max-w-sm" {...props}>
+        <section className="min-w-[150px] xl:max-w-sm" {...props}>
      
-            <div className=" max-h-[25%]  ">
+            <div className=" min-w-[150px] max-h-[25%]  ">
                 <img src={ARRAY_IMGS[imgIndex]} 
                 alt="" 
                 className=" content-center aspect-auto w-full object-cover cursor-pointer rounded-md max-h-[300px] max-w-[300px]"  />

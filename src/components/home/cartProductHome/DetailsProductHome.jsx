@@ -21,34 +21,34 @@ const DetailsProductsHome = ({objectProduct}) => {
       setCount(1)
     }
     return(
-        <section className="container max-h-[30vh] text-xs flex flex-col mx-auto px-4 md:px-0">
-        {/* <p className=" mb-3 text-orange-primary font-bold uppercase tracking-wide">
+        <section className="container max-h-[30vh] text-xs flex flex-col  px-4 md:px-4">
+        <p className=" hidden mb-3 text-orange-primary font-bold uppercase tracking-wide md:block">
         {objectProduct.subtitle}
-        </p> */}
+        </p>
         <h2 className=" mb-0 text-sm font-bold">
         {objectProduct.title}
         </h2>
-        <p className=" text-xs mb-0 text-ellipsis text-dark-grayish-blue">
+        <p className=" hidden max-h-12 overflow-hidden text-xs mb-0 text-dark-grayish-blue min-[320px]:block">
         {objectProduct.description}
         </p>
-        <div className="flex mb-0 items-center justify-between gap-4 font-bold md:gap-1">
+        <div className="flex mb-0 items-center justify-start gap-4 font-bold md:gap-1">
           <span className=" text-xs">${(
             objectProduct.price *(1 - objectProduct.discount)
             ).toFixed(2)}</span>
-          <span className=" mr-auto rounded-md bg-pale-orange py-1 px-2 text-orange-primary">
+          <span className="  rounded-md bg-pale-orange py-1 px-2 text-orange-primary">
           {objectProduct.discount * 100}%
           </span>
-          <span className=" text-right text-xs text-grayish-blue line-through md:text-left md:col-span-3">
+          <span className=" text-right text-xs text-grayish-blue line-through md:text-left ">
           ${objectProduct.price.toFixed(2)}
           </span>
         </div>
-        <div className=" flex flex-row justify-between">
-          <div className=" flex grow items-baseline justify-between rounded-md bg-gray-200 py-2 px-1 pb-1 md:col-span-1">
-            <button className=" text-xl grow text-orange-primary" onClick={decrementCount}>-</button>
-            <span className=" text-lg">{count}</span>
-            <button className=" text-xl grow text-orange-primary" onClick={incrementCount}>+</button>
+        <div className=" md:max-w-3xl  flex flex-row justify-between ">
+          <div className=" flex grow items-baseline justify-between rounded-md bg-gray-200  px-1 py-1 ">
+            <button className=" text-lg md:text-xl grow text-orange-primary" onClick={decrementCount}>-</button>
+            <span className=" font-bold md:text-lg">{count}</span>
+            <button className=" text-lg md:text-xl grow text-orange-primary" onClick={incrementCount}>+</button>
           </div>
-          <button className=" flex items-center w-[40%] justify-center gap-x-3 rounded-md bg-orange-primary py-3 text-white transition-all hover:bg-orange-700 md:col-span-1" onClick={handleAddToCart}>
+          <button className=" textlg flex items-center w-[40%] justify-center gap-x-3 rounded-md bg-orange-primary py-1 text-white transition-all hover:bg-orange-700" onClick={handleAddToCart}>
             <CartIcon fill="#fff" className="fill-white" />
             <span>Add</span>
           </button>

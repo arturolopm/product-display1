@@ -32,7 +32,7 @@ const objectProduct = {
 
 const Home = () => {
   return (
-    <section className=" bg-white">
+    <section className=" mx-4 bg-white">
         
         <div className=" flex flex-row rounded-xl items-center gap-1 mx-auto mb-2 md:container h-[25%] ">
         <GalleryProductsHome 

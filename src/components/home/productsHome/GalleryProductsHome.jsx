@@ -9,7 +9,7 @@ const GalleryProductsHome = ({ ARRAY_IMGS, ARRAY_IMG_SMALL }) => {
             <SlideProductsHome 
                 ARRAY_IMGS={ARRAY_IMGS}
                 ARRAY_IMG_SMALL={ARRAY_IMG_SMALL}
-                className=" max-h-[25%] flex mx-auto content-center  md:gap-4 max-w-[40%]"
+                className="min-w-[150px] max-h-[25%] flex mx-auto content-center  md:gap-4 max-w-[40%]"
                 
             />
             
