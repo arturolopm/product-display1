@@ -11,11 +11,12 @@ const App = () => {
   return (
     <>
     <CartDetailsProvider>
-        <IndexHeader />
+        
       <Router>
       <Routes>
-       <Route path="/" element={<Home />} />
-        <Route path="/product" element={<IndexProducts />} />
+      
+       <Route path="/" element={[<IndexHeader />,<Home />]} />
+        <Route path="/products" element={[<IndexHeader />,<IndexProducts />]} />
       </Routes>
       </Router>
     </CartDetailsProvider>

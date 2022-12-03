@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom"
+
 import DetailsProductHome from "@/components/home/cartProductHome/DetailsProductHome";
 
 import GalleryProductsHome from "@/components/home/productsHome/GalleryProductsHome";
@@ -34,14 +36,14 @@ const Home = () => {
   return (
     <section className=" mx-4 bg-white">
         
-        <div className=" flex flex-row rounded-xl items-center gap-1 mx-auto mb-2 md:container h-[25%] ">
+        <Link to="/product" className=" flex flex-row rounded-xl items-center gap-1 mx-auto mb-2 md:container h-[25%] ">
         <GalleryProductsHome 
             ARRAY_IMGS={objectProduct.imagesMain}
             ARRAY_IMG_SMALL={objectProduct.imagesSmall}
         />
         <DetailsProductHome objectProduct={objectProduct} />
         
-        </div>
+        </Link>
         <span className="container mb-2 mx-auto h-[1px] w-full bg-gray-300 block"></span>
 
         <div className=" flex flex-row rounded-xl items-center gap-1 mx-auto mb-2 md:container max-h-[25%] ">

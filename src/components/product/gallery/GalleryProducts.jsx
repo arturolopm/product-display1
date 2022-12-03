@@ -26,10 +26,10 @@ const GalleryProducts = ({ ARRAY_IMGS, ARRAY_IMG_SMALL }) => {
                     ARRAY_IMGS={ARRAY_IMGS}
                     ARRAY_IMG_SMALL={ARRAY_IMG_SMALL}
                     isOpenModal={isOpenModal}
-                    className="hidden md:grid md:absolute md:-translate-y-1/2 md:-translate-x-1/2 md:top-1/2 md:left-1/2 md:z-10 md:grid-cols-4 md:gap-4 max-w-[500px]"
+                    className=" z-30 hidden md:grid md:absolute md:-translate-y-1/2 md:-translate-x-1/2 md:top-1/2 md:left-1/2  md:grid-cols-4 md:gap-4 max-w-[500px]"
                     handleCloseModal={handleCloseModal}
                 />
-                <span className=" fixed top-0 left-0 w-full h-full bg-black/60 backdrop-blur-sm" onClick={handleCloseModal}></span>
+                <span className=" z-10  fixed top-0 left-0 w-full h-full bg-black/60 backdrop-blur-sm" onClick={handleCloseModal}></span>
                 </>
             )}
         </>

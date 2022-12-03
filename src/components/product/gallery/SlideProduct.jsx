@@ -32,7 +32,7 @@ const SlideProduct = ({
 
 
     return (
-        <section className="xl:max-w-[500px]" {...props}>
+        <section className=" xl:max-w-[500px]" {...props}>
         {
             isOpenModal && (
                 <button onClick={handleCloseModal} className="md:col-span-4 text-right">X</button>

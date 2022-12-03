@@ -1,5 +1,6 @@
 import {useState, useContext} from 'react'
 import {useCartDetails} from '@/context/useCartDetails'
+import { Link } from "react-router-dom"
 import logoSneakers from "@/assets/images/logo.svg";
 import AvatarImage from "@/assets/images/image-avatar.png";
 
@@ -34,24 +35,25 @@ const IndexHeader = () => {
   return (
     <div>
       
-    <header className="  z-20 relative container mx-auto flex items-center gap-8 p-4 md:p-0">
+    <header className="  z-10 relative container mx-auto flex items-center gap-8 p-4 md:p-0">
       <button className="md:hidden" onClick={handleOpenMenu}>
         <MenuIcon />
       </button>
+      <Link to="/">
       <img className=" mx-4 mr-auto mb-1 h-5 md:mr-5" 
             src={logoSneakers} 
             alt="Logo Sneakers" />
+      </Link>
       <nav 
         className={` bg-white text-orange-primary flex flex-col font-bold md:static md:mr-auto md:flex md:h-auto md:flex-row md:gap-4  md:p-0  ${
           isOpenMenu 
-            ?  'fixed top-0 left-0 z-10 flex h-full w-2/5 flex-col gap-y-[1px]  p-5  md:p-8' : 'hidden'
+            ?  'fixed top-0 left-0 z-9 flex h-full w-2/5 flex-col gap-y-[1px]  p-5  md:p-8' : 'hidden'
             }`}>
           <button className="mb-12 md:hidden" onClick={handleCloseMenu}>
             <CloseIcon />
           </button>
-          <NavLinkHeader text="Collections" />
-          <NavLinkHeader text="Men" />
-          <NavLinkHeader text="Woman" />
+          <NavLinkHeader text="Products" />
+          
           <NavLinkHeader text="About" />
           <NavLinkHeader text="Contact" />
           
