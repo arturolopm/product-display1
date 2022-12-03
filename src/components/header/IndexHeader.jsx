@@ -32,9 +32,9 @@ const IndexHeader = () => {
   
   
   return (
-    <>
-
-    <header className="relative container mx-auto flex items-center gap-8 p-4 md:p-0">
+    <div>
+      
+    <header className="  z-20 relative container mx-auto flex items-center gap-8 p-4 md:p-0">
       <button className="md:hidden" onClick={handleOpenMenu}>
         <MenuIcon />
       </button>
@@ -42,9 +42,9 @@ const IndexHeader = () => {
             src={logoSneakers} 
             alt="Logo Sneakers" />
       <nav 
-        className={` font-bold md:static md:mr-auto md:flex md:h-auto md:flex-row md:gap-4  md:p-0  ${
+        className={` bg-white text-orange-primary flex flex-col font-bold md:static md:mr-auto md:flex md:h-auto md:flex-row md:gap-4  md:p-0  ${
           isOpenMenu 
-            ?  'absolute top-0 left-0 z-10 flex h-full w-4/5 flex-col gap-y-[21px] bg-white p-8 ' : 'hidden'
+            ?  'fixed top-0 left-0 z-10 flex h-full w-2/5 flex-col gap-y-[1px]  p-5  md:p-8' : 'hidden'
             }`}>
           <button className="mb-12 md:hidden" onClick={handleCloseMenu}>
             <CloseIcon />
@@ -72,7 +72,7 @@ const IndexHeader = () => {
       </div>
     </header>
     <span className="container mb-2 mx-auto h-[1px] w-full bg-gray-500 md:block"></span>
-    </>
+    </div>
   );
 };
 
