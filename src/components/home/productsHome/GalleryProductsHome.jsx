@@ -1,4 +1,5 @@
 import SlideProductsHome from "@/components/home/productsHome/SlideProductsHome";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const GalleryProductsHome = ({ ARRAY_IMGS, ARRAY_IMG_SMALL }) => {

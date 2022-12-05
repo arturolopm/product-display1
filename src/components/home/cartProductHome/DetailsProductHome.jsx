@@ -1,5 +1,6 @@
 import CartIcon from "@/components/icons/CartIcon.jsx"
 import { useCartDetails } from '@/context/useCartDetails'
+import { Link } from "react-router-dom"
 import { useContext, useState } from "react"
 
 const DetailsProductsHome = ({objectProduct}) => {
@@ -22,6 +23,7 @@ const DetailsProductsHome = ({objectProduct}) => {
     }
     return(
         <section className="container max-h-[30vh] text-xs flex flex-col  px-4 md:px-4">
+        <Link to ="/products">
         <p className=" hidden mb-3 text-orange-primary font-bold uppercase tracking-wide md:block">
         {objectProduct.subtitle}
         </p>
@@ -31,6 +33,7 @@ const DetailsProductsHome = ({objectProduct}) => {
         <p className=" hidden max-h-12 overflow-hidden text-clip text-xs mb-0 text-dark-grayish-blue min-[320px]:block">
         {objectProduct.description}
         </p>
+        </Link>
         <div className="flex mb-0 items-center justify-start gap-4 font-bold md:gap-1">
           <span className=" text-xs">${(
             objectProduct.price *(1 - objectProduct.discount)

@@ -1,6 +1,7 @@
 import { useState } from "react"
 import PrevIcon from "@/components/icons/PrevIcon"
 import NextIcon from "@/components/icons/NextIcon"
+import { Link } from "react-router-dom"
 
 
 const SlideProductsHome = ({
@@ -27,7 +28,7 @@ const SlideProductsHome = ({
     return (
         <section className="min-w-[150px] xl:max-w-sm" {...props}>
      
-            <div className=" min-w-[150px] max-h-[25%]  ">
+            <Link to="/products" className=" min-w-[150px] max-h-[25%]  ">
                 <img src={ARRAY_IMGS[imgIndex]} 
                 alt="" 
                 className=" content-center aspect-auto w-full object-cover cursor-pointer rounded-md max-h-[300px] max-w-[300px]"  />
@@ -42,7 +43,7 @@ const SlideProductsHome = ({
                         <NextIcon />
                     </button> */}
                 
-            </div>
+            </Link>
             
             
 
