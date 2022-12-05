@@ -52,7 +52,7 @@ const IndexHeader = () => {
             alt="Logo Jade" />
       </Link>
       <nav 
-        className={` bg-white mx-auto text-orange-primary flex flex-col font-bold md:static md:mr-auto md:flex md:h-auto md:flex-row md:gap-4  md:p-0  ${
+        className={` bg-white mx-auto text-green-primary flex flex-col font-bold md:static md:mr-auto md:flex md:h-auto md:flex-row md:gap-4  md:p-0  ${
           isOpenMenu 
             ?  'fixed top-0 left-0 z-9 flex h-full w-2/5 flex-col gap-y-[1px]  p-5  md:p-8' : 'hidden'
             }`}>
@@ -70,12 +70,12 @@ const IndexHeader = () => {
           onClick={handleOpenCart}
           className="relative">
           <CartIcon />
-          <span className=' absolute bg-orange-primary px-1 top-1 right-0 text-[0.6rem] rounded-lg text-white font-bold'>
+          <span className=' absolute bg-green-primary px-1 top-1 right-0 text-[0.6rem] rounded-lg text-white font-bold'>
             {cartQuantity}
           </span>
         </button>
         <button onClick={handleOpenProfile}>
-          <img src={AvatarImage} className="w-10 mx-4" alt=""></img>
+          <img src={AvatarImage} className="w-10 mx-4 ml-auto" alt=""></img>
         </button>
         {
           isOpenProfile && <ProfileHeader />

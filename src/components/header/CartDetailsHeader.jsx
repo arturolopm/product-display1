@@ -38,7 +38,7 @@ const CartDetailsHeader = () => {
                         <button 
                         className=' ml-auto' 
                         onClick={() => deleteCartItems(item.id)}>
-                        <DeleteIcon className="hover:fill-orange-primary" />
+                        <DeleteIcon className="hover:fill-green-primary" />
                         </button>
                     </article>
                         ))
@@ -46,7 +46,7 @@ const CartDetailsHeader = () => {
                     {
                         cartItems.length != 0 && 
                             <div className=' px-6 pb-8'>
-                            <button className=" w-full rounded-md bg-orange-primary py-4 text-white transition-all hover:bg-orange-700">Checkout</button>
+                            <button className=" w-full rounded-md bg-green-primary py-4 text-white transition-all hover:bg-green-700">Checkout</button>
                             </div>
                     }
                     

@@ -9,8 +9,8 @@ module.exports = {
         sans: ["Kumbh Sans", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        "orange-primary": "hsl(26, 100%, 55%)",
-        "pale-orange": "hsl(25, 100%, 94%)",
+        "green-primary": "rgb(56, 176, 0)",
+        "pale-green": "rgba(158, 240, 26, 0.2)",
         "very-dark-blue": "hsl(220, 13%, 13%)",
         "dark-grayish-blue": "hsl(219, 9%, 45%)",
         "grayish-blue": "hsl(220, 14%, 75%)",

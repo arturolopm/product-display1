@@ -24,7 +24,7 @@ const DetailsProductsHome = ({objectProduct}) => {
     return(
         <section className="container max-h-[30vh] text-xs flex flex-col  px-4 md:px-4">
         <Link to ="/products">
-        <p className=" hidden mb-3 text-orange-primary font-bold uppercase tracking-wide md:block">
+        <p className=" hidden mb-3 text-green-primary font-bold uppercase tracking-wide md:block">
         {objectProduct.subtitle}
         </p>
         <h2 className=" mb-0 text-sm font-bold">
@@ -38,7 +38,7 @@ const DetailsProductsHome = ({objectProduct}) => {
           <span className=" text-xs">${(
             objectProduct.price *(1 - objectProduct.discount)
             ).toFixed(2)}</span>
-          <span className="  rounded-md bg-pale-orange py-1 px-2 text-orange-primary">
+          <span className="  rounded-md bg-pale-green py-1 px-2 text-green-primary">
           {objectProduct.discount * 100}%
           </span>
           <span className=" text-right text-xs text-grayish-blue line-through md:text-left ">
@@ -47,11 +47,11 @@ const DetailsProductsHome = ({objectProduct}) => {
         </div>
         <div className=" md:max-w-3xl  flex flex-row justify-between ">
           <div className=" flex grow items-baseline justify-between rounded-md bg-gray-200  px-1 py-1 ">
-            <button className=" text-lg md:text-xl grow text-orange-primary" onClick={decrementCount}>-</button>
+            <button className=" text-lg md:text-xl grow text-green-primary" onClick={decrementCount}>-</button>
             <span className=" font-bold md:text-lg">{count}</span>
-            <button className=" text-lg md:text-xl grow text-orange-primary" onClick={incrementCount}>+</button>
+            <button className=" text-lg md:text-xl grow text-green-primary" onClick={incrementCount}>+</button>
           </div>
-          <button className=" textlg flex items-center w-[40%] justify-center gap-x-3 rounded-md bg-orange-primary py-1 text-white transition-all hover:bg-orange-700" onClick={handleAddToCart}>
+          <button className=" textlg flex items-center w-[40%] justify-center gap-x-3 rounded-md bg-green-primary py-1 text-white transition-all hover:bg-green-700" onClick={handleAddToCart}>
             <CartIcon fill="#fff" className="fill-white" />
             <span>Add</span>
           </button>
