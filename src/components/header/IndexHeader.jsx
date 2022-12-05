@@ -11,12 +11,15 @@ import CloseIcon from "@/components/icons/CloseIcon";
 import NavLinkHeader from "@/components/header/NavLinkHeader";
 
 import CardDetailsHeader from '@/components/header/CartDetailsHeader';
+import ProfileHeader from './ProfileHeader';
 
 const IndexHeader = () => {
   const{cartQuantity} = useContext(useCartDetails)
 
   const [isOpenMenu, setIsOpenMenu ] = useState(false)
   const [isOpenCart, setIsOpenCart] = useState(false)
+
+  const [isOpenProfile, setIsOpenProfile] = useState(false)
 
  
 
@@ -26,9 +29,13 @@ const IndexHeader = () => {
   const handleCloseMenu = () => {
     setIsOpenMenu(false)
   }
-   const handleOpenCart = () => {
+  const handleOpenCart = () => {
     setIsOpenCart(!isOpenCart)
-   }
+  }
+  const handleOpenProfile = () => {
+    setIsOpenProfile(!isOpenProfile)
+  }
+  
   
   
   
@@ -67,7 +74,12 @@ const IndexHeader = () => {
             {cartQuantity}
           </span>
         </button>
-        <img src={AvatarImage} className="w-10 mx-4" alt=""></img>
+        <button onClick={handleOpenProfile}>
+          <img src={AvatarImage} className="w-10 mx-4" alt=""></img>
+        </button>
+        {
+          isOpenProfile && <ProfileHeader />
+        }
         {
           isOpenCart && <CardDetailsHeader />
         }
