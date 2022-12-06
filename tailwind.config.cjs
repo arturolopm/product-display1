@@ -9,7 +9,7 @@ module.exports = {
         sans: ["Kumbh Sans", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        "green-primary": "rgb(56, 176, 0)",
+        "green-primary": "rgb(46, 166, 0)",
         "pale-green": "rgba(158, 240, 26, 0.2)",
         "very-dark-blue": "hsl(220, 13%, 13%)",
         "dark-grayish-blue": "hsl(219, 9%, 45%)",
