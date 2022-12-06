@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-export default ({...props}) => {
+const NavLinkHeader = ({...props}) => {
     const linked = "/"+props.text
     const text = props.text
     
@@ -10,3 +10,5 @@ export default ({...props}) => {
         </Link>
     )
 }
+
+export default NavLinkHeader

@@ -24,24 +24,24 @@ const DetailsProductsHome = ({objectProduct}) => {
     return(
         <section className="container max-h-[30vh] text-xs flex flex-col  px-4 md:px-4">
         <Link to ="/products">
-        <p className=" hidden mb-3 text-green-primary font-bold uppercase tracking-wide md:block">
+        <p className=" hidden mb-3 text-green-primary font-bold uppercase tracking-wide md:block md:text-lg">
         {objectProduct.subtitle}
         </p>
-        <h2 className=" mb-0 text-sm font-bold">
+        <h2 className=" mb-0 text-sm font-bold md:text-xl">
         {objectProduct.title}
         </h2>
-        <p className=" hidden max-h-12 overflow-hidden text-clip text-xs mb-0 text-dark-grayish-blue min-[320px]:block">
+        <p className=" hidden max-h-12 overflow-hidden text-clip text-xs mb-0 text-dark-grayish-blue min-[320px]:block md:text-base">
         {objectProduct.description}
         </p>
         </Link>
-        <div className="flex mb-0 items-center justify-start gap-4 font-bold md:gap-1">
-          <span className=" text-xs">${(
+        <div className="flex mb-0 items-center  gap-4 font-bold md:justify-start md:gap-1 md:self-start flex-wrap ">
+          <span className=" self-center text-xs md:text-lg md:w-[40%]">${(
             objectProduct.price *(1 - objectProduct.discount)
             ).toFixed(2)}</span>
-          <span className="  rounded-md bg-pale-green py-1 px-2 text-green-primary">
+          <span className="  rounded-md bg-pale-green mx-auto py-1 px-2 text-green-primary md:text-base md:w-10">
           {objectProduct.discount * 100}%
           </span>
-          <span className=" text-right text-xs text-grayish-blue line-through md:text-left ">
+          <span className=" text-right text-xs text-grayish-blue line-through md:text-left md:text-lg">
           ${objectProduct.price.toFixed(2)}
           </span>
         </div>

@@ -87,7 +87,7 @@ const IndexHeader = () => {
           </button>
           <NavLinkHeader text="Products" />
           
-          <NavLinkHeader text="About" />
+          <NavLinkHeader text="Colections" />
           <NavLinkHeader text="Contact" />
           
       </nav>
@@ -101,9 +101,9 @@ const IndexHeader = () => {
             {cartQuantity}
           </span>
         </button>
-        <button  onClick={handleOpenProfile} ref={domClickOutsideProfile}>
+        <button className=' min-w-fit'  onClick={handleOpenProfile} ref={domClickOutsideProfile}>
        
-          <img  src={AvatarImage} className="w-10 mx-4 ml-auto" alt=""></img>
+          <img  src={AvatarImage} className=" w-10 mx-4 ml-auto" alt=""></img>
         </button>
           
         {

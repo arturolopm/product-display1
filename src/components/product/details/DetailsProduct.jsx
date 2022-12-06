@@ -28,7 +28,7 @@ const DetailsProduct = ({objectProduct}) => {
         <h2 className=" mb-4 text-3xl font-bold">
         {objectProduct.title}
         </h2>
-        <p className=" mb-5 text-dark-grayish-blue">
+        <p className=" mb-5 text-dark-grayish-blue md:text-xl">
         {objectProduct.description}
         </p>
         <div className=" mb-5 grid grid-cols-3 items-center gap-4 font-bold md:grid-cols-[1fr_3fr] md:gap-1">
