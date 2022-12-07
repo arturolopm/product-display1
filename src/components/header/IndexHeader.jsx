@@ -17,7 +17,10 @@ const IndexHeader = () => {
   return (
     <div>
       <header className="  container relative z-10 mx-auto flex items-center gap-8 p-4 md:p-0">
-        <button className=" md:hidden" onClick={handleOpenMenu}>
+        <button
+          className=" text-3xl text-slate-500 md:hidden"
+          onClick={handleOpenMenu}
+        >
           <MenuIcon />
         </button>
         <Link to="/">

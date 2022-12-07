@@ -2,7 +2,7 @@ import MapDiv from "@/components/contact/MapDiv";
 import { FaWhatsapp, FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 const Contact = () => {
   return (
-    <div className=" min-h-screen">
+    <div className=" min-h-[calc(100vh-88px-3px)]">
       <div className=" container mx-auto flex max-w-4xl flex-wrap justify-center border border-solid bg-slate-100  px-4 ">
         <div className=" mb-3 w-full text-center font-bold uppercase tracking-wide text-green-primary md:block md:text-lg">
           Contact
