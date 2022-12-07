@@ -1,4 +1,2 @@
-const Footer = () => {
-
-}
-export default Footer
+const Footer = () => {};
+export default Footer;
