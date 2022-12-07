@@ -14,24 +14,27 @@ import NavLinkHeader from "@/components/header/NavLinkHeader";
 import CardDetailsHeader from '@/components/header/CartDetailsHeader';
 import ProfileHeader from './ProfileHeader';
 
-let useClickOutside = (handler) => {
-  let domClickOutside = useRef()
-  useEffect(() => {
-    let handlerOutside =  (event) =>{
-      if (!domClickOutside.current.contains(event.target)){
-
-        handler()
-      }
-    };
-    document.addEventListener("mousedown",handlerOutside);
-    return () => {
-      document.removeEventListener("mousedown", handlerOutside)
-    }
-  }, )
-  return domClickOutside
-}
+// let useClickOutside = (handler) => {
+//   let domClickOutside = useRef()
+  
+//   useEffect(() => {
+//     let handlerOutside =  (event) =>{
+//       if (!domClickOutside.current.contains(event.target)){
+        
+//         handler()
+//       }
+//     };
+//     document.addEventListener("mousedown",handlerOutside);
+//     return () => {
+//       document.removeEventListener("mousedown", handlerOutside)
+//     }
+//   }, )
+//   return domClickOutside
+  
+// }
 
 const IndexHeader = () => {
+  
   const{cartQuantity} = useContext(useCartDetails)
 
   const [isOpenMenu, setIsOpenMenu ] = useState(false)
@@ -52,17 +55,18 @@ const IndexHeader = () => {
   }
   const handleOpenProfile = () => {
     setIsOpenProfile(!isOpenProfile)
+    
   }
   
-  const domClickOutsideProfile = useClickOutside(() => {
-    setIsOpenProfile(false)
-  })
-  const domClickOutsideCart = useClickOutside(() => {
-    setIsOpenCart(false)
-  })
-  const domClickOutsideMenu = useClickOutside(() => {
-    setIsOpenMenu(false)
-  })
+  // const domClickOutsideProfile = useClickOutside(() => {
+  //   setIsOpenProfile(false)
+  // })
+  // const domClickOutsideCart = useClickOutside(() => {
+  //   setIsOpenCart(false)
+  // })
+  // const domClickOutsideMenu = useClickOutside(() => {
+  //   setIsOpenMenu(false)
+  // })
   
   return (
     <div>
@@ -81,7 +85,7 @@ const IndexHeader = () => {
           isOpenMenu 
             ?  'fixed top-0 left-0 z-9 flex h-full w-2/5 flex-col gap-y-[1px]  p-5  md:p-8' : 'hidden'
             }`}
-            ref={domClickOutsideMenu}>
+            >
           <button className="mb-12 md:hidden" onClick={handleCloseMenu}>
             <CloseIcon />
           </button>
@@ -93,25 +97,25 @@ const IndexHeader = () => {
       </nav>
       <div className=" ml-auto flex gap-4"  >
         <button 
+          
           onClick={handleOpenCart}
-          ref={domClickOutsideCart}
           className="relative">
           <CartIcon />
           <span className=' absolute bg-green-primary px-1 top-1 right-0 text-[0.6rem] rounded-lg text-white font-bold'>
             {cartQuantity}
           </span>
         </button>
-        <button className=' min-w-fit'  onClick={handleOpenProfile} ref={domClickOutsideProfile}>
+        <button className=' min-w-fit'  onClick={handleOpenProfile}  >
        
           <img  src={AvatarImage} className=" w-10 mx-4 ml-auto" alt=""></img>
         </button>
-          
         {
-          isOpenProfile && <ProfileHeader  />
+          isOpenProfile && <ProfileHeader   />
         }
           
+          
         {
-          isOpenCart && <CardDetailsHeader />
+          isOpenCart && <CardDetailsHeader  />
         }
       </div>
     </header>

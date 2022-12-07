@@ -5,7 +5,8 @@ import { useCartDetails } from '@/context/useCartDetails';
 import DeleteIcon from '@/components/icons/DeleteIcon';
 
 
-const CartDetailsHeader = () => { 
+const CartDetailsHeader = ({...props}) => { 
+    
 
     const {cartItems, deleteCartItems} = useContext(useCartDetails)
 
